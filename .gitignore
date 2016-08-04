@@ -155,6 +155,7 @@ GTAGS
 /build_image/*/*.img
 /build_image/*/*.gz
 /build_image/zip_files/system/lib/modules/*
+/build_image/zip_files/system/xbin/*
 /build.log
 /repack.log
 /fips_fmp_utils
