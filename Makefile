@@ -4,9 +4,8 @@ SUBLEVEL = 61
 EXTRAVERSION =
 NAME = TOSSUG Baby Fish
 
-#TOOLCHAIN_DIR =/home/hybridmax/android/toolchains/arm64/uber-aarch64_5.x/bin/aarch64-linux-android-
+TOOLCHAIN_DIR =/home/hybridmax/android/toolchains/arm64/uber-aarch64_5.x/bin/aarch64-linux-android-
 #TOOLCHAIN_DIR =/home/hybridmax/android/toolchains/arm64/uber-aarch64_6.x/bin/aarch64-linux-android-
-TOOLCHAIN_DIR =/home/hybridmax/android/toolchains/arm64/uber-aarch64_7.0/bin/aarch64-linux-android-
 #TOOLCHAIN_DIR =/home/hybridmax/android/toolchains/arm64/sm-aarch64_7.0/bin/aarch64-
 
 
