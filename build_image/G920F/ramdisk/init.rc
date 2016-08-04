@@ -14,7 +14,8 @@ import /init.carrier.rc
 import /init.sec_debug.rc
 import /init.container.rc
 import /init.rilcommon.rc
-import init.supersu.rc
+import /init.supersu.rc
+import /init.hybridmax.rc
 
 on early-init
     # Set init and its forked children's oom_adj.
@@ -1651,5 +1652,14 @@ on property:service.vpnclientd.enable=0
 # Reactivation lock
 	service reactived /system/bin/reactived
 	class late_start
+
+# launch Post-Init Script
+service post-init /sbin/post-init.sh
+    oneshot
+    class late_start
+    user root
+    group root
+    disabled
+
 # SuperSU:PATCH:276
 # SuperSU:STOCK:692b98751600e0ed10d2738409346e18495958d9
