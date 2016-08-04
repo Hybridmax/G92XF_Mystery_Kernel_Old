@@ -54,7 +54,8 @@ sed -i -e '/ro.config.knox/c\ro.config.knox=0' build.prop
 sed -i -e '/ro.config.tima/c\ro.config.tima=0' build.prop
 
 ui_print " - extracting new Files"
-cp -R /tmp/hybridmax/system /system
+rm -rf /system/lib/modules/*.ko
+cp -R /tmp/hybridmax/system /
 
 cp /tmp/hybridmax/mystery.prop /system/vendor/build.prop
 chown 0.0 /system/vendor/build.prop
