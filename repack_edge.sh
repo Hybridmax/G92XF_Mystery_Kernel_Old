@@ -62,8 +62,12 @@ cd ramfs_tmp
 rm -f ramdisk_fix_permissions.sh
 
 # ADB Fix
-rm -rf sbin/adbd
+if [ -f "../G925F/patch/adbd_5.1.1" ]; then
+
+cp -r sbin/adbd sbin/adbd.bak
 cp -r ../G925F/patch/adbd_5.1.1 sbin/adbd
+
+fi
 
 find . | fakeroot cpio -H newc -o | lzop -9 > ../ramdisk.cpio.lzo
 

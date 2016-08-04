@@ -22,9 +22,9 @@ export HYBRIDVER="-$KERNELNAME"
 # Toolchains
 
 #UBER
-BCC=$TOOLCHAIN_DIR/uber-aarch64_5.x/bin/aarch64-linux-android-
+#BCC=$TOOLCHAIN_DIR/uber-aarch64_5.x/bin/aarch64-linux-android-
 #BCC=$TOOLCHAIN_DIR/uber-aarch64_6.x/bin/aarch64-linux-android-
-#BCC=$TOOLCHAIN_DIR/uber-aarch64_7.0/bin/aarch64-linux-android-
+BCC=$TOOLCHAIN_DIR/uber-aarch64_7.0/bin/aarch64-linux-android-
 
 #SABERMOD
 #BCC=$TOOLCHAIN_DIR/sm-aarch64_7.0/bin/aarch64-
@@ -58,7 +58,6 @@ BUILD_KERNEL()
 	export CROSS_COMPILE=$BCC
 	make ARCH=arm64 $KERNEL_DEFCONFIG
 	sed -i 's,CONFIG_LOCALVERSION="-Hybridmax",CONFIG_LOCALVERSION="'$HYBRIDVER'",' .config
-	make CONFIG_DEBUG_SECTION_MISMATCH=y
 	make ARCH=arm64 -j$BUILD_THREADS
 }
 
