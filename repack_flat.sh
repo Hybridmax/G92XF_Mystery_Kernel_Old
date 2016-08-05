@@ -20,6 +20,23 @@ export HYBRIDVER="$DEVELOPER-Kernel-$DEVICE-$VERSION_NUMBER-($CURDATE)"
 export KERNEL_NAME="$HYBRIDVER"
 
 #########################################################################################
+# Check Image
+if [ -f "arch/arm64/boot/Image" ]; then
+	clear
+	echo "............................................."
+	echo "Repacking Boot.img, wait"
+	echo "............................................."
+	echo " "
+	sleep 3
+
+else
+	echo "............................................."
+	echo "Exiting cause no Image was found!"
+	echo "............................................."
+	sleep 3
+	exit
+fi
+#########################################################################################
 # Copy Modules & Image
 
 echo "Copy Modules............................"

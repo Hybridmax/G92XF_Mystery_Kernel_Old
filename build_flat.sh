@@ -86,7 +86,7 @@ fi
 #########################################################################################
 # Create Log File of Build
 
-rm -rf ./build.log
+rm -rf ./build_flat.log
 (
 	START_TIME=`date +%s`
 	CLEANUP
@@ -96,6 +96,6 @@ rm -rf ./build.log
 	let "ELAPSED_TIME=$END_TIME-$START_TIME"
 	echo "Total compile time is $ELAPSED_TIME seconds"
 	echo " "
-) 2>&1	 | tee -a ./build.log
+) 2>&1	 | tee -a ./build_flat.log
 
 exit 1
