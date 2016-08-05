@@ -1,8 +1,14 @@
 CONTRIBUTORS:
 
  - hybridmax
- - ktoonsez
+ - UpInTheAir
  - AndreiLux
- - thehacker911
- - Arter97
+ - ktoonsez
+ - thehacker911 (HRTKernel)
  - glewarne
+ - dorimanx
+ - JoePerches
+ - paolo-github
+ - notaz
+ - halaszk
+ - wildea01
